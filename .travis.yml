@@ -1,0 +1,19 @@
+language: python
+cache: pip
+
+env:
+  global:
+    - KUBECONFIG=${HOME}/.kube/kubernaut
+
+install:
+  - pip3 install kubernaut
+  - kubernaut set-token ${KUBERNAUT_TOKEN}
+
+before_script:
+  - kubernaut claim
+
+after_script:
+  - kubernaut discard
+
+script:
+  - echo "Remove this line and add your CI build and test logic here"
