@@ -1,8 +1,7 @@
 ---
-language: java
+language: python
 
-jdk:
-  - oraclejdk8
+cache: pip
 
 env:
   global:
@@ -20,4 +19,4 @@ after_script:
 
 script:
   - echo "Remove this and the next line and add your CI build and test logic here"
-  - javac -version
+  - python --version
